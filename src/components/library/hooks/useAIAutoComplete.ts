@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect, useRef } from 'react';
 
 interface UseAIAutoCompleteOptions {
@@ -18,7 +19,7 @@ export function useAIAutoComplete({ endpoint, apiKey, prompt, minLength = 2, deb
   const [suggestion, setSuggestion] = useState<string>('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const debounceRef = useRef<NodeJS.Timeout | null>(null);
+  const debounceRef = useRef<any>(null);
 
   useEffect(() => {
     if (prompt.length < minLength) {
