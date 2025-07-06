@@ -77,7 +77,7 @@ const Sidebar = ({ items, direction, sidebarKey }: SidebarProps) => {
   }, [items, sidebarKey, selectedItem]);
 
   return (
-    <aside className={`fixed left-5 z-50 ${sidebarKey === '/' ? 'opacity-0 xl:opacity-100' : 'opacity-100'}`}>
+    <aside className={`fixed left-5 z-50 opacity-0 xl:opacity-100`}>
       <SpotlightCard className="custom-sidebar-spotlight-card h-screen" spotlightColor="rgba(84, 181, 255, 0.5)" sidebar>
         <nav className='h-full flex items-center justify-center'>
           {sidebarKey === '/' ? (

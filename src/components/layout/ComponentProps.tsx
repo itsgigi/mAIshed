@@ -18,7 +18,7 @@ const ComponentProps = ({ props, setProps, fields }: ComponentPropsEditorProps) 
   };
 
   return (
-    <div className={`absolute right-5 max-w-[250px] ${props['hidden'] ? 'hidden' : ''}`}>
+    <div className={`relative xl:absolute xl:right-5 max-w-[250px] ${props['hidden'] ? 'hidden' : ''}`}>
       <SpotlightCard className="custom spotlight-card mx-4 xl:mx-0 z-0" spotlightColor="rgba(84, 181, 255, 0.5)">
         <p className="text-lg font-semibold mb-4">Component Props</p>
         <div className="space-y-3">

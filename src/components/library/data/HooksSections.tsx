@@ -1,14 +1,19 @@
 import AIAutoCompleteDemo from '../hooks/AIAutoCompleteDemo';
 import AIModerationDemo from '../hooks/AIModerationDemo';
-import HookElement from '../hooks/HookElement';
 import SteamingResponses from '../hooks/SteamingResponses';
+import UiElement from '../Element';
+import { 
+  useStreamResponsesCode, 
+  useAIAutoCompleteCode, 
+  useAIModerationCode 
+} from './HooksCodeData';
 
 const sections = [
   {
     id: 'useStreamResponses',
     title: 'useStreamResponses',
     content: (
-      <HookElement
+      <UiElement
         title="useStreamResponses"
         component={SteamingResponses}
         /* defaultProps={{
@@ -23,7 +28,7 @@ const sections = [
           { name: 'fontsize', type: 'string' },
           { name: 'color', type: 'color' }
         ]} */
-        code={`test`}
+        code={useStreamResponsesCode}
       />
     )
   },
@@ -31,10 +36,10 @@ const sections = [
     id: 'useAIAutoComplete',
     title: 'useAIAutoComplete',
     content: (
-      <HookElement
+      <UiElement
         title="useAIAutoComplete"
         component={AIAutoCompleteDemo}
-        code={`test`}
+        code={useAIAutoCompleteCode}
       />
     )
   },
@@ -42,10 +47,10 @@ const sections = [
     id: 'useAIModeration',
     title: 'useAIModeration',
     content: (
-      <HookElement
+      <UiElement
         title="useAIModeration"
         component={AIModerationDemo}
-        code={`test`}
+        code={useAIModerationCode}
       />
     )
   },
